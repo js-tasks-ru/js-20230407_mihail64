@@ -19,7 +19,7 @@ export default class ColumnChart {
   }
 
 
-  getTemplate = () => { return `
+  getTemplate () { return `
   <div class="column-chart column-chart_loading" style="--chart-height: ${this.chartHeight}">
     <div class="column-chart__title"> Total ${this.label} ${this.getLinkTemplate()}</div>
       <div class="column-chart__container">
@@ -31,11 +31,11 @@ export default class ColumnChart {
   </div>
   `;}
 
-  getLinkTemplate = () => {
+  getLinkTemplate () {
     return this.link ? `<a href=${this.link} class="column-chart__link">View all</>` : ``;
   }
 
-  getDataTemplate = () => {
+  getDataTemplate () {
     const max = Math.max(...this.data);
 
     return this.data.map(item => {
